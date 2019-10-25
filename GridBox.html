@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+    }
+
+    #Parent {
+        display: grid;
+        height: 500px;
+        width: 500px;
+        grid-template:
+            "a1 a2 a3"
+            "a1 a4 a3"
+            "a5 a5 a5";
+        border: 10px solid white;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+    }
+
+    .item {
+        margin: 5px;
+    }
+
+
+    .item:nth-child(1) {
+        grid-area: a1;
+        border: 5px solid #23b04d;
+    }
+
+    .item:nth-child(2) {
+        grid-area: a2;
+        border: 5px solid #75c2db;
+    }
+
+    .item:nth-child(3) {
+        grid-area: a3;
+        border: 5px solid #23b04d;
+    }
+
+    .item:nth-child(4) {
+        grid-area: a4;
+        border: 5px solid #75c2db;
+    }
+
+    .item:nth-child(5) {
+        grid-area: a5;
+        border: 5px solid #a266a2;
+    }
+</style>
+
+<body>
+    <div id="Parent">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>
